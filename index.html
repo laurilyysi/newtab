@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        background: black;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 100vh;
+      }
+
+      #links {
+        display: grid;
+        grid-template-columns: repeat(7, 175px);
+        grid-template-rows: repeat(4, 100px);
+        position: absolute;
+      }
+
+      a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-family: "Google Sans", serif;
+        font-size: 24px;
+        transition: 0.2s;
+      }
+
+      a:hover {
+        font-size: 28px;
+        transition: 0.2s;
+      }
+
+      @media (max-width: 1250px) {
+        #links {
+          grid-template-columns: repeat(2, 150px);
+          grid-template-rows: repeat(14, 75px);
+        }
+      }
+    </style>
+    <title>New Tab</title>
+  </head>
+  <body>
+    <div id="links">
+      <a href="https://www.youtube.com" id="yt">yt</a>
+      <a href="https://www.twitter.com" id="twt">twt</a>
+      <a href="https://www.facebook.com" id="fb">fb</a>
+      <a href="https://www.reddit.com" id="reddit">reddit</a>
+      <a href="https://www.instagram.com" id="ig">ig</a>
+      <a href="https://www.last.fm/user/tisaey" id="lastfm">lastfm</a>
+      <a href="https://www.notion.so" id="notion">notion</a>
+
+      <a href="https://www.delfi.ee" id="delfi">delfi</a>
+      <a href="https://ekspress.delfi.ee" id="ee">ee</a>
+      <a href="https://www.epl.delfi.ee" id="epl">epl</a>
+      <a href="https://www.postimees.ee" id="pm">pm</a>
+      <a href="https://www.err.ee" id="err">err</a>
+      <a href="https://www.nytimes.com" id="nyt">nyt</a>
+      <a href="https://en.wikipedia.org/" id="wiki">wiki</a>
+
+      <a href="https://calendar.google.com" id="cal">cal</a>
+      <a href="https://mail.google.com" id="gmail">gmail</a>
+      <a href="https://drive.google.com" id="drive">drive</a>
+      <a href="https://maps.google.com" id="maps">maps</a>
+      <a href="https://www.sonaveeb.ee" id="dict">dict</a>
+      <a href="https://www.swedbank.ee" id="swed">swed</a>
+      <a
+        href="https://docs.google.com/spreadsheets/d/1T8z5fX6bulLAweCjaf3b2R35uzEoJ4vaUAO22CU0GPo"
+        id="fin"
+        >$</a
+      >
+
+      <a href="https://ois2.ut.ee" id="ois">õis</a>
+      <a href="https://moodle.ut.ee" id="moodle">moodle</a>
+      <a href="https://outlook.office365.com/mail/inbox" id="outlook"
+        >outlook</a
+      >
+      <!-- prettier-ignore -->
+      <a href="#" id="empty">
+        <script>
+          const updateTime = () => {
+            let time = new Date()
+            let hours = time.getHours() < 10 ? "0" + time.getHours() : time.getHours()
+            let minutes = time.getMinutes() < 10 ? "0" + time.getMinutes() : time.getMinutes()
+            document.getElementById("empty").textContent = hours + ":" + minutes
+            setTimeout(updateTime, 1000)
+          }
+          updateTime()
+        </script>
+      </a>
+      <a href="https://www.facebook.com/messages/t/4529255827109171" id="itchat"
+        >it</a
+      >
+      <a href="https://slack.com/" id="slack">slack</a>
+      <a href="https://github.com/laurilyysi" id="github">github</a>
+    </div>
+  </body>
+</html>

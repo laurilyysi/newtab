@@ -1,1 +1,1 @@
-# newtab
+Using GitHub pages to host a custom new tab page via [this](https://chrome.google.com/webstore/detail/custom-new-tab-url/) extension.
